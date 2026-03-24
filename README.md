@@ -1,5 +1,4 @@
 # archinstall安装系统
-我的arch系统初始化
 
 
 ## 安装日常软件
