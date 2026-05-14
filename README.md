@@ -26,7 +26,7 @@ git clone https://github.com/romkatv/powerlevel10k
 git -C "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k" pull
 ```
 
-## yazi nvim vscode
+## yazi nvim vscode gemini-cli
 ```
 paru -S yazi neovim visual-studio-code-bin
 sudo pacman -S luarocks ueberzugpp fd ripgrep ffmpeg 7zip jq poppler fzf zoxide imagemagick chafa 
@@ -43,6 +43,23 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 ```
 cd ~/.local/share/nvim/lazy/markdown-preview.nvim
 npm install
+```
+
+### 应用于root用户
+```
+sudo cp ~/.zshrc ~/.p10k.zsh ~/.vimrc /root
+sudo cp -r ~/.oh-my-zsh/ /root
+su root
+chsh
+```
+
+### gemini-cli
+```
+#安装nvm以更好管理版本
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+source ~/.zshrc
+nvm install --lts
+npm install -g @google/gemini-cli
 ```
 
 ## 系统UI
